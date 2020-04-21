@@ -55,6 +55,7 @@ class MainWindow(Ui_Form, QMainWindow):
     def __init__(self):
         super().__init__()
 
+        self.setFixedSize(self.size())
         self.setupUi(self)
         self.init_handlers()
 

@@ -20,13 +20,10 @@ class Ui_Form(object):
     def setupUi(self, Form):
         if not Form.objectName():
             Form.setObjectName(u"Form")
-        Form.resize(560, 260)
         Form.setMinimumSize(QSize(560, 260))
         Form.setMaximumSize(QSize(560, 260))
         Form.setAcceptDrops(True)
         Form.setWindowTitle(u"Source Code Calculator")
-        Form.setToolButtonStyle(Qt.ToolButtonIconOnly)
-        Form.setUnifiedTitleAndToolBarOnMac(False)
         self.centralwidget = QWidget(Form)
         self.centralwidget.setObjectName(u"centralwidget")
         self.calculate_button = QPushButton(self.centralwidget)
@@ -41,6 +38,8 @@ class Ui_Form(object):
         self.drop_label.setGeometry(QRect(10, 10, 541, 171))
         font = QFont()
         font.setPointSize(25)
+        font.setKerning(True)
+        font.setStyleStrategy(QFont.PreferAntialias)
         self.drop_label.setFont(font)
         self.drop_label.setAutoFillBackground(False)
         self.drop_label.setFrameShape(QFrame.StyledPanel)

@@ -2,14 +2,6 @@
 <ui version="4.0">
  <class>Form</class>
  <widget class="QMainWindow" name="Form">
-  <property name="geometry">
-   <rect>
-    <x>0</x>
-    <y>0</y>
-    <width>560</width>
-    <height>260</height>
-   </rect>
-  </property>
   <property name="minimumSize">
    <size>
     <width>560</width>
@@ -27,12 +19,6 @@
   </property>
   <property name="windowTitle">
    <string notr="true">Source Code Calculator</string>
-  </property>
-  <property name="toolButtonStyle">
-   <enum>Qt::ToolButtonIconOnly</enum>
-  </property>
-  <property name="unifiedTitleAndToolBarOnMac">
-   <bool>false</bool>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QPushButton" name="calculate_button">
@@ -69,6 +55,8 @@
     <property name="font">
      <font>
       <pointsize>25</pointsize>
+      <stylestrategy>PreferAntialias</stylestrategy>
+      <kerning>true</kerning>
      </font>
     </property>
     <property name="autoFillBackground">
