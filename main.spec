@@ -4,13 +4,14 @@ import platform
 
 block_cipher = None
 application_name = 'SourceCalc'
+application_id = 'com.manchenkov.source_calc'
 icon_file = './ui/icon'
 icon_extension = '.icns' if platform.system() == 'Darwin' else '.ico'
 
 a = Analysis(['main.py'],
              pathex=['./'],
              binaries=[],
-             datas=[],
+             datas=[('./ui/icon.ico', '.')],
              hiddenimports=[],
              hookspath=[],
              runtime_hooks=[],
@@ -29,6 +30,7 @@ exe = EXE(pyz,
           name=application_name,
           debug=False,
           bootloader_ignore_signals=False,
+          icon=f"{icon_file}{icon_extension}",
           strip=False,
           upx=True,
           console=False)
@@ -45,7 +47,7 @@ coll = COLLECT(exe,
 app = BUNDLE(coll,
              name=f"{application_name}.app",
              icon=f"{icon_file}{icon_extension}",
-             bundle_identifier='com.manchenkov.source_calc',
+             bundle_identifier=application_id,
              info_plist={
                  'NSPrincipalClass': 'NSApplication',
                  'NSAppleScriptEnabled': False,
