@@ -1,5 +1,7 @@
 # -*- mode: python ; coding: utf-8 -*-
-
+from PyInstaller.building.api import PYZ, EXE, COLLECT
+from PyInstaller.building.build_main import Analysis
+from PyInstaller.building.osx import BUNDLE
 import platform
 
 block_cipher = None
