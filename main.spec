@@ -1,19 +1,21 @@
 # -*- mode: python ; coding: utf-8 -*-
-from PyInstaller.building.api import PYZ, EXE, COLLECT
+import platform
+
+from PyInstaller.building.api import COLLECT, EXE, PYZ
 from PyInstaller.building.build_main import Analysis
 from PyInstaller.building.osx import BUNDLE
-import platform
 
 block_cipher = None
 application_name = 'SourceCalc'
 application_id = 'com.manchenkov.source_calc'
-icon_file = './ui/icon'
+icon_file = './src/data/icon'
 icon_extension = '.icns' if platform.system() == 'Darwin' else '.ico'
+entry_point = 'src/main.py'
 
-a = Analysis(['main.py'],
+a = Analysis([entry_point],
              pathex=['./'],
              binaries=[],
-             datas=[('./ui/icon.ico', '.')],
+             datas=[('./src/data/icon.ico', '.')],
              hiddenimports=[],
              hookspath=[],
              runtime_hooks=[],

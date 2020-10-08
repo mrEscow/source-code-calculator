@@ -11,5 +11,5 @@ Just download and run `make build` then use executable file from `dist` director
 To install this project with dependencies run the following command
 
 ```
-pip install -r requirements.txt
+make sync
 ```
