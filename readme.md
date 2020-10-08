@@ -6,10 +6,12 @@ Simple GUI application to count lines of code in some selected directory
 
 Just download and run `make build` then use executable file from `dist` directory
 
-## Project installation
+**Available commands** - execute `make` for details
 
-To install this project with dependencies run the following command
-
-```
-make sync
+```bash
+build                          Build application
+clean                          Clean up distributable files
+help                           Show this message
+run                            Run application
+sync                           Install dependencies
 ```
